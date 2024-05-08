@@ -1,0 +1,60 @@
+i=0
+
+while [ $i -lt 5 ]
+do
+  echo "Number: $i"
+  ((i++))
+  if [[ "$i" == '2' ]]; then
+    break
+  fi
+done
+
+echo 'All Done!'
+~~~~~~~~~~~~~~~~~~~~
+the output
+Number: 0
+Number: 1
+All Done!
+-------------------------------------------------------------------
+i=0
+
+while [ $i -lt 5 ]
+do
+  ((i++))
+  if [[ "$i" == '2' ]]; then
+    continue
+  fi
+  echo "Number: $i"
+done
+
+echo 'All Done!'
+~~~~~~~~~~~~~~~~~~~~
+the output
+Number: 1
+Number: 3
+Number: 4
+Number: 5
+All Done!
+----------------------------------------------------------
+for i in {0..3}
+do
+  echo "Number: $i"
+done
+~~~~~~~~~~~~~~~~~~~~
+the output
+Number: 0
+Number: 1
+Number: 2
+Number: 3
+------------------------------------------------------------
+for i in {0..20..5}
+do
+  echo "Number: $i"
+done
+~~~~~~~~~~~~~~~~~~~~
+the output
+Number: 0
+Number: 5
+Number: 10
+Number: 15
+Number: 20

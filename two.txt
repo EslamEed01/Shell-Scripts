@@ -1,0 +1,68 @@
+#!/bin/bash
+x=1
+while [ $x -le 5 ]
+do
+  echo "Welcome $x times"
+  x=$(( $x + 1 ))
+done
+---------------------------------------------------
+
+#!/bin/bash
+
+echo "Enter a number"
+read num
+
+fact=1
+while [ $num -gt 1 ]
+do
+    fact=$((fact * num))
+    num=$((num - 1))
+done
+
+echo $fact
+--------------------------------------------
+
+#!/bin/bash
+
+echo "Enter the number of terms for Fibonacci series:"
+read n
+
+num1=0
+num2=1
+counter=0
+
+echo "Fibonacci Series up to $n terms:"
+while [ $counter -lt $n ]; do
+
+        echo -n "$num1 "
+    temp=$((num1 + num2))
+    num1=$num2
+    num2=$temp
+    counter=$((counter + 1))
+done
+echo ""
+-----------------------------------------------------
+#!/bin/bash
+
+echo "Enter a number:"
+read num
+
+factorial=1
+
+
+    for ((i=1; i<=num; i++)); do
+        factorial=$((factorial * i))
+    done
+    echo "Factorial of $num is: $factorial"
+
+
+
+----------------------------------------------------
+for (( var=10; var>=0; var-- ))
+
+do 
+
+  echo "Counting down...$var"
+
+done
+
